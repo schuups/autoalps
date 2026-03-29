@@ -1,0 +1,12 @@
+# docker-compose.yml
+services:
+  mcp-server:
+    build: .
+    environment:
+      - OAUTH_CLIENT_ID="<client_id>"
+      - OAUTH_CLIENT_SECRET="<client_secret>"
+      - OAUTH_TOKEN_URL="http://localhost:8080/auth/realms/kcrealm/protocol/openid-connect/token"
+      - OAUTH_SCOPES="firecrest-v2"
+      - BACKEND_API_BASE_URL="http://localhost:8000"
+    ports:
+      - "8888:8888"
