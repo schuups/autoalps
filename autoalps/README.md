@@ -14,7 +14,7 @@ Conceptually:
 * **MCP server** → exposes system capabilities (FirecREST APIs)
 * **Claude CLI** → orchestrates reasoning + tool usage
 
-Claude makes code changes locally and uploads them to `clariden` what it submits the job. It then reads the job log file to determine the outcome and plan the next iteration.
+Claude makes code changes locally (laptop?), uploads them to `clariden`, and submit a job to execute the experiment. It then reads the job log file to determine the outcome and plan the next iteration.
 
 ## Setup
 
@@ -30,9 +30,9 @@ On `https://developer.cscs.ch`:
 * Subscribe to FirecREST
 * Retrieve the OAuth **Consumer Key** and **Customer Secret**
 
-### 3. Start the MCP server
+### 3. Start the local MCP server
 
-Create a virtual environment with dependendices:
+Create a local (laptop?) virtual environment with dependendices:
 
 ```sh
 uv venv
@@ -64,7 +64,7 @@ Via the `/mcp` command, confirm that it shows as "connected". To double-check, y
 
 ### 5. Setup folders and .venv on Alps
 
-On Alps, the virutal environment needs to be prepared.
+On `clariden`, the folder and the virutal environment needs to be prepared.
 
 ```sh
 [clariden][stefschu@clariden-ln001 autoalps]$ pwd
